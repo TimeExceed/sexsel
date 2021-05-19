@@ -1,0 +1,5 @@
+# -*- python -*-
+Import('env')
+
+pdf = env.Latex('sexsel.tex')
+env.Default(pdf)
