@@ -1,23 +1,617 @@
 \documentclass[UTF8,lualatex]{ctexbeamer}
 \usepackage{graphicx}
-\usepackage{minted}
 \usepackage{tabu}
 \usepackage{amsmath}
 
+\usetheme{Frankfurt}
 \setbeamertemplate{note page}[plain]
 % $BEAMER_NOTES
 
 \title{\kaishu 性选择与演化}
-  \author{陶大}
-  \institute{纳拓软件}
-  \date{\small
-    Created in Jan.\ 2011}
+    \author{陶大}
+    \institute{纳拓软件}
+    \date{\tiny
+        Created in Jan.\ 2011\\
+        Updated in May\ 2021}
 
 \begin{document}
 \songti
     
 \begin{frame}
 \titlepage
+\end{frame}
+
+\section{什么是演化论}
+
+\begin{frame}
+    \frametitle{什么是演化论}
+    \begin{block}{什么是演化论？}
+        一个生活在35亿多年前的原始物种——可能是一个能够自我复制的分子——逐步演化出了地球上的所有物种，
+        其规模随着时间而不断扩大，发散出许许多多新的不同物种，其中所发生的大多数（不是全部）演化改变的机制是自然选择。
+        \begin{itemize}
+            \item<2-> 演化
+            \item<2-> 渐进
+            \item<2-> 物种形成
+            \item<2-> 共同祖先
+            \item<2-> 自然选择
+            \item<2-> 其他演化机制
+                \begin{itemize}
+                    \item<3> \textcolor{red}{性选择}
+                \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 演化，不是“进化”。演化没有方向。
+        \item 渐进，每次都只动局部。不搞全局推翻重来。
+        \item 自然选择只是其中之一，性选择和中性漂变也起了作用。
+    \end{itemize}
+}
+
+\section{性选择}
+\subsection{性别二态性}
+
+\begin{frame}
+    \frametitle{孔雀难题}
+    \begin{columns}
+        \begin{column}{.47\textwidth}
+            \includegraphics[width=\textwidth]{peafowl.jpg}
+            \\
+            求偶中的雄孔雀
+            \\ \small
+            (src: \url{https://e-info.org.tw/node/84415})
+        \end{column}
+        \begin{column}{.47\textwidth}
+            \begin{itemize}
+                \item 雌雄个体在外观上的差异
+                \item 雄孔雀的尾巴是个累赘
+                    \begin{itemize}
+                        \item<2> Then, WHY?
+                    \end{itemize}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 雨季里就是条拖把
+        \item 不利其飞行
+        \item 鲜亮的颜色吸引捕食者
+        \item 占用大量的能量
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{爱尔兰马鹿}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \includegraphics[width=\textwidth,height=5cm]{male-irish-dear.jpg}
+            \\ \small
+            Male Irish Dear
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \includegraphics[width=\textwidth,height=5cm]{female-irish-dear.jpg}
+            \\ \small
+            Female Irish Dear
+        \end{column}
+    \end{columns}
+    
+    \begin{center}
+        \small
+        (src: \url{https://en.wikipedia.org/wiki/Irish_elk})    
+    \end{center}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 爱尔兰马鹿灭绝于约一万年前。
+            既不是爱尔兰特有（曾经遍布欧亚大陆），也不是一种马鹿。
+        \item 只有雄鹿长有巨角。
+        \item 巨角跨度近4米，重量可达40公斤。作为对照，其头颅仅有2公斤。
+        \item 更过分的是，每年都要脱落再重新生长出来。
+        \item Then, WHY?
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{“不适应性”}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{male-euplectes-ardens.jpeg}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{shorten_euplectes-ardens.jpeg}
+        \end{column}
+    \end{columns}
+
+    \begin{center}
+        红领寡妇鸟
+    \end{center}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 剪短红领寡妇鸟的尾羽，反而使得雄鸟的身体健康状况得到普遍的改善。
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{“不适应性”}
+    \begin{columns}[t]
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{crotaphytus-collaris.jpeg}
+            \\
+            北京动物园的环颈蜥
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{tabular}{*{5}{c}}
+                \hline
+                    & S1  & S2  & S3    & Total \\
+                \hline
+                M1  & 14  & 3   & 1     & 18 \\
+                M2  & 4   & 1   & 0     & 5 \\
+                M3  & 8   & 2   & 2     & 12 
+                \onslide<2->{
+                \\ \hline
+                F   & 0   & 0   & 0     & 0
+                \\ \hline
+                }
+            \end{tabular}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 图中是一对环颈蜥。雄蜥体色鲜亮而雌蜥黯淡。
+        \item 环颈蜥有三种生境，雄蜥也有三种体色。
+            生物学家在每种生境中都挑选了各种体色的雄蜥各若干，
+            然后跟踪观察到实验期结束被捕食的各有多少。
+            他们画了一张表格，$S_i$代表生境，$M_j$代表某种体色的雄蜥，格子代表在$M_j$在$S_i$生境中被捕食的数量。
+        \item 那么雌蜥如何呢？
+            Zero!
+        \item Then, 雄蜥干嘛把自己搞那么扎眼呢？
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{性别二态性}
+    \begin{block}{性别二态性(Sexual Dimorphism)}
+        \begin{itemize}
+            \item 雌雄个体的形态、行为差异巨大
+            \item 雄性之形态、行为有害其自身
+                \begin{itemize}
+                    \item 消耗能量、不便生活
+                    \item 更易被捕食
+                    \item 更倾向于冒险
+                    \item ……
+                \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\subsection{性选择}
+
+\begin{frame}
+    \frametitle{性选择}
+    \begin{block}{性选择}
+        一个性状，如果
+        \begin{itemize}
+            \item 使其所有者拥有后代的机会，
+            \item 超过有害个体生存而损失的拥有后代的机会，
+        \end{itemize}
+        那么这个性状背后的基因就会传播开来。
+    \end{block}
+    \begin{block}<2>{性选择的基本形式}
+        \begin{itemize}
+            \item 争斗法则：雄性之间发生“面对面”的冲突
+            \item 配偶选择：雌性偏爱某些雄性的特征或行为
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\subsubsection{争斗法则}
+
+\begin{frame}
+    \frametitle{争斗法则}
+    \begin{columns}[t]
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{sexual-dimorphism_northern-elephant-seal.jpg}
+            \\
+            \tiny
+            (src: \url{https://upload.wikimedia.org/wikipedia/commons/d/d8/See_elefanten_edit.jpg})
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{male-fighting_northern-elephant-seal.jpg}
+            \\
+            \tiny
+            (src: \url{https://sa.ylib.com/MagArticle.aspx?id=4815})
+        \end{column}
+    \end{columns}
+
+    \begin{center}
+        \small 北象海豹
+    \end{center}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 一夫多妻制
+        \item 雄性为获得交配机会激烈打斗
+        \item 结果：雄性的体型极为巨大
+            \begin{itemize}
+                \item 体长6米
+                \item 体重3吨
+            \end{itemize}
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{争斗法则}
+    \begin{columns}[t]
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{red-winged-blackbird.jpg}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{red-winged-blackbird_flock.jpg}
+        \end{column}
+    \end{columns}
+
+    \begin{center}
+        \small 美洲红翼鸫
+        \\
+        \tiny
+        (src: \url{https://en.wikipedia.org/wiki/Red-winged_blackbird})
+    \end{center}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 一夫多妻制
+        \item 然而情敌于其生存有利
+        \item 所以，“要文斗不要武斗”。
+            \begin{itemize}
+                \item 肩羽：失去艳丽肩章的雄性有70\%失去领地，对照组仅有10\%。
+                \item 歌声：失去发声能力的雄性也同样失去自己的领地。
+            \end{itemize}
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{争斗法则}
+    \begin{columns}[t]
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=4cm,height=3cm]{millipede.jpg}
+            \end{center}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=4cm,height=3cm]{damselfly.jpg}
+            \end{center}
+        \end{column}
+    \end{columns}
+    \begin{columns}[t]
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=4cm,height=3cm]{fruit-fly.jpg}
+            \end{center}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=4cm,height=3cm]{snake.jpg}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 马陆：雄性交配后骑在雌性身上不下来
+        \item 豆娘：阴茎上的倒刺可以将其他雄性留下的精液刮出来
+        \item 果蝇：某些种类的精液里含有抑情剂和使其他果蝇精子失活的杀精剂
+        \item 蛇：某些种类的精液可以暂时堵塞雌性的阴道
+    \end{itemize}
+}
+
+\subsubsection{配偶选择}
+
+\begin{frame}
+    \frametitle{配偶选择}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{peafowl_plumage.jpg}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{long-tailed-widowbird.jpg}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 孔雀
+            \begin{itemize}
+                \item 最精美的雄孔雀有160个眼点，参与了36\%的交配。
+                \item 人工减去20个眼点之后，比对照组平均减少2.5个配偶。
+            \end{itemize}
+        \item 长尾寡妇鸟
+            \begin{itemize}
+                \item 正常雄鸟尾长达半米。雌鸟仅为8厘米。
+                \item 剪短尾羽的雄鸟几乎没有配偶。
+                \item 接长尾羽的雄鸟吸引到的雌鸟几乎是对照组的2倍。
+            \end{itemize}
+    \end{itemize}
+}
+
+\section{性选择与演化}
+
+\begin{frame}
+    \frametitle{性选择与演化}
+    \begin{block}{两个疑问}
+        \begin{itemize}
+            \item 为什么雄性争斗、雌性选择？
+            \item 雌性选择什么？
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\subsection{雄性争斗、雌性选择}
+
+\begin{frame}
+    \frametitle{一些事实}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \begin{block}{谁是生育最多的女性？}
+                \onslide<2->{
+                    某俄国妇女。
+                    1725-1745二十年间怀孕27次，总计69个子女。
+                    \begin{itemize}
+                        \item 16次双胞胎
+                        \item 7次三胞胎
+                        \item 4次四胞胎
+                    \end{itemize}
+                }
+            \end{block}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \onslide<3>{
+                \includegraphics[width=\textwidth]{mulai-ismail.jpg}
+                \\
+                \small
+                Mulai Ismail, 18世纪的摩洛哥苏丹。
+                至少342个女儿与525个儿子的父亲。
+            }
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{交配的成本与策略}
+    \begin{block}{交配的机会成本}
+        \begin{center}
+            \begin{tabular}{*{3}{c}}
+                \\ \hline
+                        & 雌性  & 雄性 \\
+                \hline
+                配子    & 宝贵  & 廉价 \\
+                怀孕    & 费时费力 & — \\
+                抚养子女& 多数物种 & 少数物种 \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{block}
+    \begin{block}<2>{交配的策略}
+        \begin{itemize}
+            \item 雌性挑剔
+            \item 雄性不加检点
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 恐龙蛋，那么大个，也是一个卵子。
+            卵子不仅提供遗传物质，也提供发育所需的养分。
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{雄性不加检点}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{centrocercus.jpg}
+                \\
+                \small
+                艾松鸡
+            \end{center}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{mormodes_and_bees.jpg}
+                \\
+                \small
+                旋柱兰与蜜蜂
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 艾松鸡以其复杂的求偶仪式闻名。
+            较少人知道，雄鸡精虫上脑的时候甚至可以和牛粪“交配”。
+        \item 雄蜂只要长得像雌蜂就上。
+            旋柱兰利用这点，把自己的花柱长得像雌蜂，以此吸引雄蜂来帮助自己传播花粉。
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{性选择的涵义}
+    \begin{block}{~}
+        \begin{enumerate}
+            \item 雌性选择
+            \item 雄性竞争
+            \item 性别二态性的物种中，几乎所有雌性都有配偶，大多数雄性没有配偶
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 雄性麋鹿的子代数量差异是雌性的3倍
+        \item 不到10\%的雄性象海豹留下子代，而雌性超过一半
+        \item 而大多数物种的出生性别比接近1:1，这意味着，对种群延续来讲，大多数雄性是无价值的。
+            所以，雄性更好斗、更爱冒险（作死）。
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{一个随堂测验}
+    \small
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[height=3cm]{mandarin-duck.jpg}
+                \\
+                鸳鸯
+            \end{center}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[height=3cm]{lovebird.jpg}
+                \\
+                爱情鸟
+            \end{center}
+        \end{column}
+    \end{columns}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[height=3cm]{anser.jpg}
+                \\
+                大雁
+            \end{center}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[height=3cm]{otididae.jpg}
+                \\
+                大鸨
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    \begin{itemize}
+        \item 问题：哪个物种实行真一夫一妻制？
+        \item 鸳鸯
+            \begin{itemize}
+                \item 中国传统的爱情鸟，“鸳鸯双宿又双飞”。
+                \item 然而生物学家的观察发现，雌鸟只要一有机会就会“出轨”（当然雄鸟也不是好“鸟”）。
+                    亲子鉴定表明，一窝雏鸟大约只有三分之一是雄鸟亲生的。
+                \item “双宿又双飞”其实是盯梢。
+            \end{itemize}
+        \item 爱情鸟
+            \begin{itemize}
+                \item 西方的爱情鸟，literally。
+            \end{itemize}
+        \item 大雁
+            \begin{itemize}
+                \item 元好问的“问世间情为何物，直教生死相许”说的就是大雁。
+                \item 中国传统结婚要送一对大雁。捉野生雁比较麻烦，所以后来改送鹅了。
+                \item 雁确实真一夫一妻制。
+                    但《雁邱词》里描述的自杀殉情场面是不可能的。
+                    丧偶一方因为有育雏经验，其实更受欢迎。
+            \end{itemize}
+        \item 大鸨
+            \begin{itemize}
+                \item 《本草纲目》说大鸨“纯雌无雄，与他鸟合”。
+                    故以鸨指妓。
+                \item 其实只是大鸨的性别二态性太厉害，古人不识雄鸨。
+            \end{itemize}
+    \end{itemize}
+}
+
+\begin{frame}
+    \frametitle{极限检验}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth,angle=90]{seahorse.jpg}
+                \\
+                \small
+                怀孕中的雄海马
+            \end{center}
+        \end{column}
+        \begin{column}{.48\textwidth}
+            \begin{itemize}
+                \item 生活在海草丛中。有些品种体型很小。
+                \item 生产卵子耗能极大。雌鱼无力产生大量卵子。
+                \item 必须走精养路线。
+                \item 然而雌性无力孵育受精卵。所以雄性“怀孕”。
+                \item 某些品种雄性的投入甚至大过雌性。
+                \item<2> 雌性竞争：雌性更明艳、具有饰物。
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{雌性选择什么？}
+
+\begin{frame}
+    \frametitle{雌性选择什么？}
+    \begin{columns}
+        \begin{column}{.48\textwidth}
+            \includegraphics[width=\textwidth]{peafowl.jpg}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\note{
+    有两种理论
+    \begin{enumerate}
+        \item 达尔文理论：雌性不知何故偏爱某一种性状。
+            雄性投其所好不断强化这种形状。
+        \item 诚实信号理论：雄性通过某种不利自身生存的性状表明自身生存能力的强大。
+            “瞧！老子这么自残还没挂。牛逼吧？”
+    \end{enumerate}
+    这两种理论并非互相排斥。
+
+    比如男性的身高，故事可能是这样的：
+    \begin{enumerate}
+        \item 一开始，大家都穷。身高和营养高度相关。
+            所以，男性身高是对家庭资源的诚实信号而被女性所偏好。
+        \item 然后，工业革命了、绿色革命了，大家都能吃饱吃好。
+            身高和家庭资源的相关性消失。
+        \item 但是女性的偏好已成。所以仍然推动男性一代一代拔个子。
+    \end{enumerate}
+}
+
+\section{应用于人类}
+
+\begin{frame}
+    \frametitle{应用于人类}
+    \begin{block}{必须特别谨慎}
+        \begin{itemize}
+            \item 很难做实验
+            \item 有些性别差异有其他解释：身高、力量
+            \item 有时繁殖需要不那么强大：丁克家庭
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{应用于人类}
+    \begin{center}
+        \Huge
+        未完待续！        
+    \end{center}
 \end{frame}
 
 \end{document}

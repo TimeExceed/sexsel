@@ -1,5 +1,5 @@
 # -*- python -*-
 Import('env')
 
-pdf = env.Latex('sexsel.tex')
+pdf = env.Beamer('sexsel.tex')
 env.Default(pdf)
